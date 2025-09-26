@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Coffee | Premium Coffee Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #5c3d2e;
+            --secondary: #e0c09f;
+            --light: #f8f9fa;
+            --dark: #2c1810;
+            --success: #7f9f80;
+        }
+        
+        .bg-primary { background-color: var(--primary) !important; }
+        .text-primary { color: var(--primary) !important; }
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=800&q=80') no-repeat center center/cover;
+            padding: 120px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .product-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .testimonial-card {
+            border-left: 4px solid var(--primary);
+        }
+        
+        .footer {
+            background-color: var(--dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Brew Haven</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="ms-lg-3">
+                    <button class="btn btn-primary">Order Online</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Experience Premium Coffee Craftsmanship</h1>
+            <p class="lead mb-5">Savor the rich flavors of our ethically sourced, hand-roasted coffee beans</p>
+            <a href="#products" class="btn btn-lg btn-primary me-2">Explore Menu</a>
+            <a href="#contact" class="btn btn-lg btn-outline-light">Visit Us</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Our Specialties</h2>
+                    <p>Discover our carefully crafted selection of premium coffee beverages made with the finest ingredients.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" class="card-img-top product-img" alt="Espresso">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Espresso</h5>
+                            <p class="card-text">Rich, bold flavor with a perfect crema. The foundation of all our drinks.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$3.50</span>
+                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" class="card-img-top product-img" alt="Cappuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Creamy Cappuccino</h5>
+                            <p class="card-text">Perfect balance of espresso, steamed milk, and velvety foam.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$4.75</span>
+                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" class="card-img-top product-img" alt="Cold Brew">
+                        <div class="card-body">
+                            <h5 class="card-title">Cold Brew Delight</h5>
+                            <p class="card-text">Smooth and refreshing, steeped for 24 hours for maximum flavor.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$5.25</span>
+                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=350&q=80" class="card-img-top product-img" alt="Mocha">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Mocha</h5>
+                            <p class="card-text">The perfect combination of rich chocolate and premium espresso.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$5.50</span>
+                                <button class="btn btn-sm btn-outline-primary">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80" alt="Coffee Shop" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Founded in 2010, Brew Haven began as a small neighborhood coffee cart with a simple mission: to serve exceptional coffee that brings people together.</p>
+                    <p>Today, we continue to source the finest ethically-grown beans from sustainable farms around the world, roasting them in small batches to ensure peak flavor.</p>
+                    <p>Our baristas are trained in the art of coffee craftsmanship, ensuring every cup we serve meets our high standards of quality and taste.</p>
+                    <button class="btn btn-primary mt-3">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p>Don't just take our word for it - hear from our community of coffee lovers.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm testimonial-card">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">"The best coffee I've had in this city! Their cold brew is incredibly smooth and refreshing."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="mb-0">Michael Chen</h6>
+                                <small class="text-muted">Regular Customer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm testimonial-card">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">"I love the atmosphere here. Perfect place to work or catch up with friends over excellent coffee."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Freelance Designer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="p-4 bg-white shadow-sm testimonial-card">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="mb-3">"As a coffee enthusiast, I appreciate their attention to detail. You can taste the quality in every sip."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="mb-0">David Martinez</h6>
+                                <small class="text-muted">Coffee Blogger</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="section-title mx-auto" style="width: fit-content;">Visit Us</h2>
+                    <p>We'd love to hear from you. Stop by our shop or get in touch.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-5">
+                            <div class="d-flex mb-4">
+                                <div class="me-4">
+                                    <i class="bi bi-geo-alt-fill text-primary h3"></i>
+                                </div>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p class="mb-0">123 Coffee Lane, Brew District<br>Seattle, WA 98101</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-4">
+                                <div class="me-4">
+                                    <i class="bi bi-clock-fill text-primary h3"></i>
+                                </div>
+                                <div>
+                                    <h5>Opening Hours</h5>
+                                    <p class="mb-0">Monday-Friday: 7am - 8pm<br>Saturday-Sunday: 8am - 9pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <i class="bi bi-telephone-fill text-primary h3"></i>
+                                </div>
+                                <div>
+                                    <h5>Contact</h5>
+                                    <p class="mb-0">Phone: (206) 555-1234<br>Email: hello@brewhaven.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-5">
+                            <h5 class="card-title mb-4">Send us a message</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white pt-5 pb-3">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Brew Haven Coffee</h5>
+                    <p>Providing exceptional coffee experiences since 2010. Ethically sourced, carefully roasted, and expertly prepared.</p>
+                    <div class="d-flex pt-3">
+                        <a href="#" class="btn btn-sm btn-outline-light me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-light me-2"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#products" class="text-white text-decoration-none">Menu</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Opening Hours</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Monday-Friday: 7am - 8pm</li>
+                        <li class="mb-2">Saturday: 8am - 9pm</li>
+                        <li class="mb-2">Sunday: 8am - 9pm</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for special offers and updates.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Brew Haven Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
